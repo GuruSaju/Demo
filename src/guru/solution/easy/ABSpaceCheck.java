@@ -1,5 +1,7 @@
 package guru.solution.easy;
 
+import java.util.Scanner;
+
 /**
  * 
  * @author Srisarguru
@@ -9,5 +11,26 @@ package guru.solution.easy;
  * characters between a and b). Otherwise return the string false.
  */
 public class ABSpaceCheck {
-
-}
+	 public static String ABCheck(String str) { 
+		 //This logic works
+		       String result="false";
+		    for(int i=0;i<str.length();i++){
+		        if(i+4<str.length()){
+		        if(str.charAt(i) == 'a' && str.charAt(i+4)=='b'){
+		            result="true";
+		            break;
+		        }
+		        }
+		        else{
+		            break;
+		        }
+		    }   
+		    return result;    
+		  } 
+		  
+		  public static void main (String[] args) {      
+		    Scanner s = new Scanner(System.in);
+		    System.out.print(ABCheck(s.nextLine())); 
+		  }   
+		  
+		}
