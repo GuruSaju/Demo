@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class LetterNumbers {
 	public static String RunLength(String str) { 
-		  
+		  long time = System.currentTimeMillis();
 	       char r=str.charAt(0);
 	       String result="";
 	       int count=0;
@@ -33,6 +33,8 @@ public class LetterNumbers {
 	            result=result+count+r;
 	        }
 	    } 
+	    long endtime= System.currentTimeMillis();
+	    System.out.println(endtime-time);
 	    return result;
 	    
 	  } 
