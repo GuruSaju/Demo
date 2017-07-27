@@ -13,17 +13,15 @@ import java.util.Scanner;
 public class ABSpaceCheck {
 	 public static String ABCheck(String str) { 
 		 //This logic works
+		 if(str.length()<5){
+			 return "false";
+		 }
 		       String result="false";
-		    for(int i=0;i<str.length();i++){
-		        if(i+4<str.length()){
+		    for(int i=0;i<str.length()-4;i++){ 
 		        if(str.charAt(i) == 'a' && str.charAt(i+4)=='b'){
 		            result="true";
 		            break;
-		        }
-		        }
-		        else{
-		            break;
-		        }
+		        } 
 		    }   
 		    return result;    
 		  } 
