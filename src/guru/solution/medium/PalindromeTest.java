@@ -1,5 +1,7 @@
 package guru.solution.medium;
 
+import java.util.Scanner;
+
 /**
  * 
  * @author Srisarguru
@@ -10,5 +12,28 @@ package guru.solution.medium;
  * race Rome-to-Vienna" should return true. 
  */
 public class PalindromeTest {
-
-}
+	 public static String PalindromeTwo(String str) { 
+		 //use string builder for faster performace??
+		    String normal="";
+		    String reverse="";
+		    String result="false";
+		    for(int i=0;i<str.length();i++){
+		        if(Character.isLetter(str.charAt(i))){
+		            normal=normal+str.charAt(i);
+		            reverse=str.charAt(i)+reverse;
+		        }
+		    }
+		    if(normal.toLowerCase().equals(reverse.toLowerCase())){
+		        result="true";
+		    }
+		    return result;
+		    
+		  } 
+		  
+		  public static void main (String[] args) {  
+   
+		    Scanner s = new Scanner(System.in);
+		    System.out.print(PalindromeTwo(s.nextLine())); 
+		  }   
+		  
+		}
